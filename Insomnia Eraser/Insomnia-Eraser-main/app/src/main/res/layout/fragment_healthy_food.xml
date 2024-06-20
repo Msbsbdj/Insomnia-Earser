@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HealthyFoodFragment"
+    android:background="@color/splash_bg">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/ntailub"
+        android:text="@string/Healthy_Life"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tv" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/breakfast_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/ntailub"
+                android:text="BreakFast"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17ssp"
+                app:layout_constraintBottom_toTopOf="@+id/random_meal_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/random_meal_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/breakfast_tv"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="invisible"
+                >
+                <ImageView
+                    android:id="@+id/random_meal_Iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="ContentDescription"
+                    android:src="@drawable/ic_music"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+
+            <include
+                android:id="@+id/randomMealShimmerIv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/breakfast_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_25sdp"
+                android:visibility="visible"
+                layout="@layout/image_shimmer"/>
+
+            <TextView
+                android:id="@+id/lunch_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/ntailub"
+                android:text="Lunch"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+                app:layout_constraintStart_toStartOf="@id/random_meal_card"
+                app:layout_constraintTop_toBottomOf="@id/random_meal_card" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:scrollIndicators="none"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lunch_Tv">
+
+                <LinearLayout
+                    android:id="@+id/popularMeals_Shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:orientation="horizontal">
+                    <include layout="@layout/meal_shimmer" />
+                    <include layout="@layout/meal_shimmer" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lunch_meals_Rv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/lunch_Tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/dinner_Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dinner"
+                app:layout_constraintTop_toBottomOf="@id/lunch_meals_Rv"
+                app:layout_constraintStart_toStartOf="@id/lunch_Tv"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/ntailub"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/_17ssp"/>
+            <HorizontalScrollView
+                android:id="@+id/dinnerHorizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_130sdp"
+                android:scrollIndicators="none"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dinner_Tv">
+
+                <LinearLayout
+                    android:id="@+id/dinnerMeals_Shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp"
+                    android:orientation="horizontal">
+                    <include layout="@layout/meal_shimmer" />
+                    <include layout="@layout/meal_shimmer" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dinner_meals_Rv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dinner_Tv"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

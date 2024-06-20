@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.fragments.BookDetailsFragment">
+
+    <ImageView
+        android:id="@+id/book_image"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:src="@drawable/testt"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Name"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="#C10505"
+        android:fontFamily="@font/ntailub"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/book_image"/>
+    <TextView
+        android:id="@+id/book_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/book_name"
+        app:layout_constraintStart_toStartOf="@id/book_name"
+        android:text="by Marco"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/source"/>
+
+    <RatingBar
+
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/ratingBarStyleIndicator"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:progressTint="#ebb30b"
+        android:rating="4.5"
+        android:progressBackgroundTint="@color/shimmer_color"
+        android:isIndicator="true"
+        android:indeterminateDrawable="@color/ic_launcher_background"
+        android:stepSize="@integer/google_play_services_version"
+        app:layout_constraintTop_toBottomOf="@id/book_auth"
+        app:layout_constraintStart_toStartOf="@id/book_auth" />
+
+    <TextView
+        android:id="@+id/book_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar"
+        android:text="@string/book_description"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ntailub"
+        android:textSize="@dimen/_13ssp" />
+
+    <TextView
+        android:id="@+id/book_desc_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toTopOf="@+id/read_btn"
+        app:layout_constraintStart_toStartOf="@id/book_desc"
+        app:layout_constraintTop_toBottomOf="@id/book_desc" />
+
+    <Button
+        android:id="@+id/read_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:backgroundTint="@color/white"
+        android:text="Read Book"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

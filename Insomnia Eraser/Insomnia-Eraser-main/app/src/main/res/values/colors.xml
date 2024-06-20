@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="splash_bg">#1e183c</color>
+    <color name="blue">#1e183c</color>
+    <color name="background_item_blur">#B3F4ECEC</color>
+    <color name="shimmer_color">#dddddd</color>
+    <color name="chat_background">#0a171f</color>
+    <color name="green">#46F506</color>
+</resources>

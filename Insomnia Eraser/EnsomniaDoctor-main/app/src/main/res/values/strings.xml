@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">EnsomniaDoctor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="account">Account</string>
+    <string name="sign_in_account">Sign in to your</string>
+    <string name="register_text"><u>Register Now</u></string>
+    <string name="forgot_password">Forget Password ?</string>
+    <string name="password">Password</string>
+    <string name="email_id">Email ID</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_an">Create an</string>
+    <string name="name">Name</string>
+    <string name="contact_no">Contact no</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="enter_name">Please Enter Your Name</string>
+    <string name="enter_email">Please Enter Your Email</string>
+    <string name="must_be_11_digits">Must be 11 digits</string>
+    <string name="unable_to_updated_token">Unable to updated token</string>
+    <string name="less_than_7_digits">Less than 7 digits</string>
+    <string name="enter_phone">Pleae Enter Your Phone Number</string>
+    <string name="enter_password">Please Enter Your Password</string>
+    <string name="type_a_message">Type a Message</string>
+    <string name="online">Online</string>
+</resources>

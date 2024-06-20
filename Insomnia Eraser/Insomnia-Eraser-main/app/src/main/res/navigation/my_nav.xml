@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment"
+            app:enterAnim="@anim/enter_fragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/enter_fragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.marco.ensominaearser.ui.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_fragment"
+            app:popUpTo="@id/viewPagerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.marco.ensominaearser.ui.authscreens.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/enter_fragment"/>
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/enter_fragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.marco.ensominaearser.ui.authscreens.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/enter_fragment"
+            app:popUpTo="@id/signupFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.marco.ensominaearser.ui.HomeFragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_meditationFragment"
+            app:destination="@id/meditationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_medicalConsultantFragment"
+            app:destination="@id/medicalConsultantFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_healthyFoodFragment"
+            app:destination="@id/healthyFoodFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mainChatFragment"
+            app:destination="@id/mainChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.BookDetailsFragment"
+        android:label="fragment_book_details"
+        tools:layout="@layout/fragment_book_details" >
+        <action
+            android:id="@+id/action_bookDetailsFragment_to_pdfViewFragment"
+            app:destination="@id/pdfViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/meditationFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.MeditationFragment"
+        android:label="fragment_meditation"
+        tools:layout="@layout/fragment_meditation" >
+        <action
+            android:id="@+id/action_meditationFragment_to_songsFragment"
+            app:destination="@id/songsFragment" />
+        <action
+            android:id="@+id/action_meditationFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songsFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.SongsFragment"
+        android:label="fragment_songs"
+        tools:layout="@layout/fragment_songs" >
+        <action
+            android:id="@+id/action_songsFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/pdfViewFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.PdfViewFragment"
+        android:label="fragment_pdf_view"
+        tools:layout="@layout/fragment_pdf_view" />
+    <fragment
+        android:id="@+id/medicalConsultantFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.MedicalConsultantFragment"
+        android:label="fragment_medical_consultant"
+        tools:layout="@layout/fragment_medical_consultant" />
+    <fragment
+        android:id="@+id/healthyFoodFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.HealthyFoodFragment"
+        android:label="fragment_healthy_food"
+        tools:layout="@layout/fragment_healthy_food" >
+        <action
+            android:id="@+id/action_healthyFoodFragment_to_mealDetailsFragment"
+            app:destination="@id/mealDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealDetailsFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.MealDetailsFragment"
+        android:label="fragment_meal_details"
+        tools:layout="@layout/fragment_meal_details" />
+    <fragment
+        android:id="@+id/mainChatFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.MainChatFragment"
+        android:label="fragment_main_chat"
+        tools:layout="@layout/fragment_main_chat" >
+        <action
+            android:id="@+id/action_mainChatFragment_to_doctorsFragment"
+            app:destination="@id/doctorsFragment" />
+        <action
+            android:id="@+id/action_mainChatFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorsFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.DoctorsFragment"
+        android:label="fragment_doctors"
+        tools:layout="@layout/fragment_doctors" >
+        <action
+            android:id="@+id/action_doctorsFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.marco.ensominaearser.ui.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+
+</navigation>
